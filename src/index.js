@@ -13,17 +13,6 @@ root.render(
     <div>
       <p className='backg' style={{ height: '100vh' }}>
         <App />
-        {/* style={{ 
-         backgroundImage: `url(${background})`,
-         backgroundPosition: "center",
-         backgroundSize: "cover",
-         // backgroundSize: "contain",
-         resizeMode: 'repeat',
-         // resizeMode: 'stretch',
-         // backgroundRepeat: "repeat-y",
-         width: "100vw",
-         height: "100vh",
-        }}> */}
       </p>
     </div>
   </React.StrictMode>

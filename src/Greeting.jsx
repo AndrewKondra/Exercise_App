@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-
 const Greeting = ({ greet  }) => {
 
     if (greet !== "") {

@@ -33,11 +33,9 @@
 
 import './App.css';
 import './index.css';
-// import background from "./activities2.png";
 
 const ActTable = (tableProp) => {
     const tableData = tableProp.activities
-    // console.log(tableData)
     return (
         <div className="flex w-full justify-center pb-6 ">
             <table className="w-4/5 justify-center " >

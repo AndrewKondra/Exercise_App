@@ -52,7 +52,6 @@ def testingv2():
 def getactivities():
     print('------start getting activities')
     print(request)
-    # print(request.json)
     numRows = int(request.json)
     con = sqlite3.connect("exercise.db")
     cur = con.cursor()
