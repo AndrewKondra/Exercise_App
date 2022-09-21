@@ -53,7 +53,7 @@ class UserInput extends Component {
 
   render() {
     return (
-      <div clasName="grid grid-cols-1 w-full" >
+      <div className="grid grid-cols-1 w-full" >
         <form className="w-4/5 grid grid-cols-3 flex m-4 border-slate-200">
           <div className="w-40 h-10 px-8">
             <label className="font-sans text-xl font-medium text-gray-800 dark:text-gray-300" >

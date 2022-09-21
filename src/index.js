@@ -11,9 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div>
-      <p className='backg' style={{ height: '100vh' }}>
+      <h1 className='backg' style={{ height: '100vh' }}>
         <App />
-      </p>
+      </h1>
     </div>
   </React.StrictMode>
 );
