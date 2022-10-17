@@ -17,7 +17,7 @@ async function getActivities(maxRow) {
 
     // console.log(resDat);
     const jsonDat = await resDat.json();
-    console.log(jsonDat)
+    // console.log(jsonDat)
     return jsonDat;
 }
 

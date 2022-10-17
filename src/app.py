@@ -51,18 +51,21 @@ def testingv2():
 @app.route('/activities', methods=['POST', 'GET'])
 def getactivities():
     print('------start getting activities')
+    print(request.json)
     print(request)
     numRows = int(request.json)
     con = sqlite3.connect("exercise.db")
     cur = con.cursor()
     print('-----data posted', numRows)
-    cur.execute("SELECT * FROM activities ORDER BY act_date DESC, time_stamp DESC LIMIT ?",(numRows,))
+    cur.execute(
+        "SELECT * FROM activities ORDER BY act_date DESC, time_stamp DESC LIMIT ?", (numRows,))
     table = [dict((cur.description[i][0], value)
-        for i, value in enumerate(rows)) for rows in cur.fetchall()]
+                  for i, value in enumerate(rows)) for rows in cur.fetchall()]
     for row in table:
         print(row)
     con.close()
     return table
+
 
 if __name__ == "__main__":
     app.run(debug=True)

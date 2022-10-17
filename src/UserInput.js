@@ -1,6 +1,6 @@
 import './App.css';
 import './index.css'
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import SendData from './SendData';
 import Greeting from './Greeting';
 import getActivities from './getActivities';
@@ -24,6 +24,7 @@ class UserInput extends Component {
     this.onSubmitForm = this.onSubmitForm.bind(this);
     this.updateTable = this.updateTable.bind(this);
   }
+  
 
   async onChange(event) {
     this.setState({
@@ -99,13 +100,7 @@ class UserInput extends Component {
           <div className="flex justify-center m-4 font-sans text-xl font-medium text-black dark:text-gray-300">
             <Greeting greet={this.state.greet} />
           </div>
-          <div className="flex justify-center relative top-2">
-            <label className="relative top-4 place-items-center inline-block relative top-6 font-sans mb-2 text-xl font-medium text-black dark:text-gray-300">
-              Number of Activities :
-              <input className="text-center shadow-md border-6 border-black" name="activityNumber" min="1" type="number" style={{ width: 50 }} onChange={this.updateTable} />
-            </label>
-          </div>
-          <div className="flex justify-center relative top-6 m-4 pxy-4">
+          <div className="flex justify-center relative top-6 m-4">
             <ActTable activities={this.state.activities} actNum={this.state.activityNumber} />
           </div>
         </div>

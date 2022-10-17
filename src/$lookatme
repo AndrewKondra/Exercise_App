@@ -1,0 +1,3 @@
+if a function is async it ALWAYS returns a promise
+if there is an await in a function the await function must be async
+await waits for the promise to be resolved

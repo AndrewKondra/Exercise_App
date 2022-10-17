@@ -9,5 +9,4 @@ const Greeting = ({ greet  }) => {
     }
 }
 
-
 export default Greeting;
